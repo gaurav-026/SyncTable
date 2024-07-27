@@ -10,7 +10,7 @@ const columns = [
   {
     field: 'email',
     headerName: 'Email ID',
-    width: 200,
+    width: 250,
   },
   {
     field: 'hobbies',

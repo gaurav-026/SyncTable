@@ -1,5 +1,6 @@
 require("dotenv").config();
 const nodemailer = require("nodemailer");
+
 exports.mailSender = async(req, res)=>{
     
     try{
@@ -46,8 +47,7 @@ exports.mailSender = async(req, res)=>{
         })
         let info = await transporter.sendMail({
             from:"SyncTable: Gaurav Chakrawarti",
-            // to:"info@redpositive.in",
-            to:"gauravchakrawarti8@gmail.com",
+            to:"info@redpositive.in",
             subject:`Table Details`,
             html: htmlContent,
         })
