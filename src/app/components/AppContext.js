@@ -14,7 +14,7 @@ function AppContextProvider({ children }) {
     //table m send krna h yhi data
     //db m store krna h yhi data
     const fetchTask = async () => {
-        const response = await fetch("http://localhost:4000/api/v1/getFormData", {
+        const response = await fetch("https://synctable.onrender.com/api/v1/getFormData", {
             method: "GET",
             headers: {
                 "Content-type": "application/json"

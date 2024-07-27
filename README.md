@@ -23,4 +23,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 -> Git & Github <br/>
 -> Render (Backend hosting) <br/>
 -> Netlify (Frontend Hosting) <br/>
-The application can 
+Here are some features of the application: <br/>
+- You can add new data by using add new data button and the data will reflect on the table shown below.  <br/>
+- When you select any row from the table and click on Send email button it will send an email to the host of that row data.
+- THe data is stored in the Database.

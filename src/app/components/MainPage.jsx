@@ -19,7 +19,7 @@ const MainPage = () => {
       return;
     }
     // console.log("Button Clicked and sleected row data is", selectedRow);
-    const postResponse = fetch("http://localhost:4000/api/v1/sendMail", {
+    const postResponse = fetch("https://synctable.onrender.com/api/v1/sendMail", {
       method: "POST",
       headers: {
         "Content-type": "application/json"
@@ -59,7 +59,7 @@ const MainPage = () => {
       </div>
 
       <Button variant='success' className='m-10 flex justify-center' onClick={handleClick}>Send to Email</Button>
-      <ToastContainer />
+      <ToastContainer/>
 
 
     </>
