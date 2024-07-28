@@ -12,6 +12,8 @@ pnpm dev
 bun dev
 ```
 
+Wait for some time while the application is loading (Frontend and backend both)
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ### Tech Stack Used

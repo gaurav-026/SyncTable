@@ -1,5 +1,5 @@
 'use client'
-
+import React from 'react'
 import AppContextProvider from "./components/AppContext";
 import MainPage from "./components/MainPage";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,7 +12,6 @@ export default function Home() {
     <div>
       <AppContextProvider>
       <MainPage/>
-      <ToastContainer/>
       </AppContextProvider>
     </div>
   );

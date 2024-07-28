@@ -5,7 +5,7 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap'
 import Modals from './Modal'
 import Table from './Table'
 import { AppContext } from './AppContext'
-import { toast, ToastContainer } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -41,7 +41,7 @@ const MainPage = () => {
     <>
       <Navbar bg="success" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="/">CRUDS</Navbar.Brand>
+          <Navbar.Brand href="/">SyncTable</Navbar.Brand>
           <Nav className="me-auto">
           </Nav>
         </Container>
@@ -59,8 +59,9 @@ const MainPage = () => {
       </div>
 
       <Button variant='success' className='m-10 flex justify-center' onClick={handleClick}>Send to Email</Button>
-      <ToastContainer/>
+      <div><ToastContainer/></div>
 
+      <div className='flex flex-row justify-center mb-10'>Developed by @Gaurav Chakrawarti</div>
 
     </>
   )

@@ -5,8 +5,6 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import { AppContext } from './AppContext';
-import { toast, ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css';
 
 
 const Modals = () => {
@@ -28,7 +26,7 @@ const Modals = () => {
     const handleSave = () => {
 
         if (!name || !phone || !email || !hobbies) {
-            toast.warn("Alert! Please fill all the fields first!");
+            alert("Alert! Please fill all the fields first!");
             return;
         }
         const newObject = {
@@ -51,6 +49,7 @@ const Modals = () => {
             body: JSON.stringify({ data: newObject })
 
         })
+        // toast.success("Data added successfully!");
         // console.log("DAta is posted successfully:", postResponse);
 
         //initialize the previous values
@@ -105,7 +104,6 @@ const Modals = () => {
                     </Button>
                 </Modal.Footer>
             </Modal>
-            <ToastContainer />
         </>
     )
 }
