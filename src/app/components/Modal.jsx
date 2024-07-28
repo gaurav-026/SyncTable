@@ -41,7 +41,7 @@ const Modals = () => {
         //send this data to appcontext
         setModalData(newObject);
         //store the form data in db
-        const postResponse = fetch("https://synctable.onrender.com//api/v1/postFormData", {
+        const postResponse = fetch("https://synctable.onrender.com/api/v1/postFormData", {
             method: "POST",
             headers: {
                 "Content-type": "application/json"
