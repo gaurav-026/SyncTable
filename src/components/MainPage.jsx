@@ -43,7 +43,7 @@ const MainPage = () => {
   }
   return (
     <>
-      <div className='py-32 lg:px-30 md:px-20 px-10 flex flex-col gap-4 items-center ' style={{background: 'linear-gradient(135deg, #E6F7E4, #FFF7D1, #FFE6D8, #FFEBF0, #F0F8FF);'}}>
+      <div className='py-32 lg:px-30 md:px-20 px-10 flex flex-col gap-4 items-center ' style={{background: 'linear-gradient(135deg, #E6F7E4, #FFF7D1, #FFE6D8, #FFEBF0, #F0F8FF)'}}>
         <h2 className='font-semibold text-green '>Sync Table</h2>
         <p className='text-xl text-center w-[80%]'>SyncTable simplifies table data entry with a modal interface, stores entries in a database, and allows users to send specific row data directly to designated emails. Perfect for efficient, organized data management and communication.</p>
       </div>
