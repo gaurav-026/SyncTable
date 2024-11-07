@@ -23,8 +23,7 @@ const MainPage = () => {
     }
     const data = {selectedRow, receiverEmail};
     // console.log("Button Clicked and sleected row data is", selectedRow);
-    // https://synctable.onrender.com/api/v1/sendMail
-    const postResponse = fetch("http://localhost:4000/api/v1/sendMail", {
+    const postResponse = fetch("https://synctable.onrender.com/api/v1/sendMail", {
       method: "POST",
       headers: {
         "Content-type": "application/json"

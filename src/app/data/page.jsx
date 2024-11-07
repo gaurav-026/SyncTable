@@ -21,7 +21,7 @@ const AddData = () => {
       message: message
     };
     console.log(object);
-    const response = fetch("http://localhost:4000/api/v1/contactUs", {
+    const response = fetch("https://synctable.onrender.com/api/v1/contactUs", {
       method:"POST",
       headers:{
         "Content-type":"application/json"
