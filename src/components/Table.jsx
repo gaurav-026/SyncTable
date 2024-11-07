@@ -2,6 +2,7 @@
 import React, { useContext } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { AppContext } from './AppContext';
+import Spinner from './Spinner';
 
 const columns = [
   { field: 'id', headerName: 'ID', width: 100 },
@@ -22,10 +23,9 @@ const columns = [
 
 const Table = () => {
   const { formData } = useContext(AppContext);
-  const { setSelectedRow } = useContext(AppContext);
+  const { setSelectedRow, loading } = useContext(AppContext);
   //initialize rows to formData
   const rows = formData;
-
   const handleSelectionChange = (selectionModel) => {
     const selectedData = selectionModel.map((id) => formData.find((row) => row.id === id));
     // console.log("Selected row data is", selectedData);
@@ -33,20 +33,22 @@ const Table = () => {
   }
 
   return (
-    <div style={{ height: 400, width: '100%' }}>
+    loading ? (<Spinner/>): (
+      <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         rows={rows}
         columns={columns}
         initialState={{
           pagination: {
-            paginationModel: { page: 0, pageSize: 5 },
+            paginationModel: { page: 0, pageSize: 10 },
           },
         }}
-        pageSizeOptions={[5, 10]}
+        pageSizeOptions={[5, 10, 20]}
         checkboxSelection
         onRowSelectionModelChange={(selectionModel) => handleSelectionChange(selectionModel)}
       />
     </div>
+    )
   )
 }
 

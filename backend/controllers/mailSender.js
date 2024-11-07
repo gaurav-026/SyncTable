@@ -6,9 +6,9 @@ exports.mailSender = async(req, res)=>{
     try{
         
         //get data from req.body
-        const data = req.body;
-        console.log("Data for sending mail is:", data);
-        const rowsHtml = data.map(row => `
+        const {selectedRow, receiverEmail} = req.body;
+        console.log("Data for sending mail is:", selectedRow, receiverEmail);
+        const rowsHtml = selectedRow.map(row => `
             <tr>
                 <td>${row.id}</td>
                 <td>${row.name}</td>
@@ -47,7 +47,7 @@ exports.mailSender = async(req, res)=>{
         })
         let info = await transporter.sendMail({
             from:"SyncTable: Gaurav Chakrawarti",
-            to:"info@redpositive.in",
+            to:receiverEmail,
             subject:`Table Details`,
             html: htmlContent,
         })
@@ -56,18 +56,12 @@ exports.mailSender = async(req, res)=>{
             success: true,
             message:"Mail sent successfully",
         });
-        
-
-
     }catch(error){
         console.log(error);
         return res.status(500).json({
             success: false,
             message:"Error while sending email"
         })
-
     }
-    
-
     
 }
